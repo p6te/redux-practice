@@ -5,7 +5,8 @@ const reducer = (state = 0, action) => {
 
     case "withdraw":
       return state - action.payload;
-
+    default:
+      return state;
   }
 };
 
