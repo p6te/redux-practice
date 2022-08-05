@@ -5,29 +5,7 @@ import { useState } from "react";
 function App() {
   const [inputValue, setInputValue] = useState("");
 
-  const counter = useSelector((state) => state.counter);
 
-  const dispatch = useDispatch();
-
-  const minus = () => {
-    dispatch({
-      type: "MINUS",
-    });
-  };
-  const plus = () => {
-    dispatch({
-      type: "PLUS",
-    });
-  };
-
-  const handleInput = () => {
-    const inputNumber = parseInt(inputValue);
-    dispatch({
-      type: "INPUT",
-      payload: inputNumber,
-    });
-    setInputValue("");
-  };
   return (
     <div className="App">
       <button onClick={() => plus()}>+ 1</button>
